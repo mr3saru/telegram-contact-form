@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 5000
 
 const token = process.env.TOKEN;
 const chatId = process.env.CHAT_ID;
