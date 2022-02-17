@@ -26,11 +26,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/contact', jsonParser, function (req, res) {
-  const { name, email, message } = req.body
-  res.send('Got a POST request')
-  const text = `**CONTACT FORM** \nName: ${name} \nEmail: ${email} \nMessage: ${message}`
-    bot.sendMessage(chatId, text).then(() => {
+app.post('/api/form', jsonParser, function (req, res) {
+  const { name, contact, message } = req.body
+  const text = `CONTACT FORM \nName: ${name} \nContact: ${contact} \nMessage: ${message}`
+  bot.sendMessage(chatId, text).then(() => {
+      res.send('success')
       res.sendStatus(200);
     });
 })

@@ -22,3 +22,16 @@ PRODUCTION_URL=
 Run the bot:
 
 `yarn start`
+
+## How to use
+
+POST /api/form
+
+```
+{
+	"name": "John Doe",
+	"contact": "johndoe@contact.com",
+	"message": "Hello World"
+}
+```
+
