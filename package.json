@@ -9,6 +9,7 @@
   "author": "vczb <viniciuszucatti@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "celebrate": "^15.0.3",
     "express": "^4.17.2",
     "node-telegram-bot-api": "^0.56.0"
   }
