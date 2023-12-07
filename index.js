@@ -31,10 +31,7 @@ app.get('/', (req, res) => {
 app.post('/api/form', jsonParser, validateForm, function (req, res) {
   const { name, contact, message } = req.body
   const text = `CONTACT FORM \nName: ${name} \nContact: ${contact} \nMessage: ${message}`
-  bot.sendMessage(chatId, text).then(() => {
-      res.send('success')
-      res.sendStatus(200);
-    });
+  bot.sendMessage(chatId, text).then(() => res.status(200).send('sucess'))
 })
 
 app.use(errors());
